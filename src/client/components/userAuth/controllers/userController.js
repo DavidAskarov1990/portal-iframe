@@ -9,7 +9,6 @@ class userController{
         this.$state = $state;
         this.$scope = $scope;
 
-        this.alerts =[];
         this.user = {};
         this.isAuth = true;
         this.data = {
@@ -53,6 +52,8 @@ class userController{
     }
 
     callAlert(message, status){
+        this.alerts =[];
+
         let alert = {
             message:message,
             status:status

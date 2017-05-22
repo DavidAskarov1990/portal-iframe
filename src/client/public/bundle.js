@@ -56728,7 +56728,6 @@ class adminController{
         this.selectUser = {};
         this.currentVideo = this.$sce.trustAsResourceUrl(CONFIG.DEFAULT_LINK);
         this.users = [];
-        this.alerts = [];
     }
 
     $onInit(){
@@ -56776,6 +56775,7 @@ class adminController{
     }
 
     callAlert(message, status){
+        this.alerts = [];
         let alert = {
             message:message,
             status:status
@@ -56884,7 +56884,6 @@ class homeController{
         this.CONFIG = CONFIG;
         this.profile = {};
         this.allVideos = [];
-        this.alerts = [];
         this.currentVideo = this.$sce.trustAsResourceUrl(CONFIG.DEFAULT_LINK);
     }
 
@@ -56932,6 +56931,7 @@ class homeController{
     }
 
     callAlert(message, status){
+        this.alerts = [];
         let alert = {
             message:message,
             status:status
@@ -57115,7 +57115,6 @@ class userController{
         this.$state = $state;
         this.$scope = $scope;
 
-        this.alerts =[];
         this.user = {};
         this.isAuth = true;
         this.data = {
@@ -57159,6 +57158,8 @@ class userController{
     }
 
     callAlert(message, status){
+        this.alerts =[];
+
         let alert = {
             message:message,
             status:status

@@ -14,7 +14,6 @@ class homeController{
         this.CONFIG = CONFIG;
         this.profile = {};
         this.allVideos = [];
-        this.alerts = [];
         this.currentVideo = this.$sce.trustAsResourceUrl(CONFIG.DEFAULT_LINK);
     }
 
@@ -62,6 +61,7 @@ class homeController{
     }
 
     callAlert(message, status){
+        this.alerts = [];
         let alert = {
             message:message,
             status:status

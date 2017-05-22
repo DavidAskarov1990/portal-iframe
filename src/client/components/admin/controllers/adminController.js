@@ -15,7 +15,6 @@ class adminController{
         this.selectUser = {};
         this.currentVideo = this.$sce.trustAsResourceUrl(CONFIG.DEFAULT_LINK);
         this.users = [];
-        this.alerts = [];
     }
 
     $onInit(){
@@ -63,6 +62,7 @@ class adminController{
     }
 
     callAlert(message, status){
+        this.alerts = [];
         let alert = {
             message:message,
             status:status
