@@ -1,0 +1,44 @@
+@color-body:  DarkOrange;
+@color-title: #FFF0F0;
+@height-list-menu: 58px;
+
+.mixin-pos-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-navigation{
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: @color-body;
+  width: 100%;
+  height: @height-list-menu;
+
+  ul{
+    .mixin-pos-center;
+    outline: none;
+
+    li{
+      list-style-type:none;
+      width: 100px;
+      height: @height-list-menu;
+      cursor:pointer;
+      .mixin-pos-center;
+
+      a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: @color-title;
+      }
+    }
+
+    li:hover {
+      background-color: @color-title;
+      a{
+        color: @color-body;
+      }
+    }
+  }
+}

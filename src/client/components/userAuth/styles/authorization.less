@@ -1,0 +1,56 @@
+@import "options";
+
+#authorization{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 90vh;
+
+    .authorization-wrapper{
+        position: relative;
+        width: 55%;
+        min-height: 50%;
+        box-shadow: -1px 2px 13px rgba(0,0,0,0.7);
+        background-color: @color-body;
+
+        h1, h2, h3{
+            color: @color-title;
+            text-transform: uppercase;
+        }
+
+        header, section{
+            h1, div > h2, div > h3{
+                .position-centre;
+            }
+            input{
+                .input-modal;
+            }
+            h3{
+                cursor: pointer;
+                margin: 25px 0;
+                text-decoration: underline;
+            }
+        }
+
+        footer{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+
+            button{
+                display: inline-flex;
+                justify-content: center;
+                width: 30%;
+                background-color: rgba(255,255,255, 0.2);
+                margin: 6px;
+                color: @color-title;
+                cursor: pointer;
+                border: 1px solid @color-title;
+                outline: none;
+            }
+        }
+    }
+}

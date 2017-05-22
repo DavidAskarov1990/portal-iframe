@@ -1,0 +1,53 @@
+@color-body:  DarkOrange;
+
+#home{
+  padding-top:25px;
+
+  .content-video{
+    display: flex;
+    justify-content: center;
+  }
+
+  .list-video{
+    display: block;
+    width:100%;
+    background-color: @color-body;
+
+    .video-link{
+      display: flex;
+      position: relative;
+      justify-content: center;
+      padding: 15px;
+      color: darkgray;
+      background-color:white;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease-out;
+
+      button{
+        position: absolute;
+        right:15px;
+        border: none;
+        background-color: @color-body;
+        color: #FFF0F0;
+        text-transform: uppercase;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 100;
+        padding: 5px;
+      }
+    }
+
+    .video-link:hover{
+      margin: 5px 0;
+      padding: 18px;
+      color: @color-body;
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  .select {
+    color: @color-body;
+  }
+}

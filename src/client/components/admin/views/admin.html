@@ -1,0 +1,29 @@
+<div id="admin-page">
+    <div class="left-side">
+        <h1>Users</h1>
+        <div ng-class="{'select': $admin.selectUser._id == user._id}"
+            class="user" ng-click="$admin.selectUserHandler(user)"
+            ng-repeat="user in $admin.users track by $index">
+            <span ng-bind="user.username"></span>
+            <input type="checkbox" ng-model="user.ban" ng-click="$admin.handlerBan()">
+        </div>
+    </div>
+    <div class="right-side">
+        <div>
+            <h1 ng-bind="$admin.selectUser.username"></h1>
+        </div>
+        <div class="content-video">
+            <iframe width="550" height="350" src="{{$admin.currentVideo}}"></iframe>
+        </div>
+        <div class="list-video">
+            <div class="video-link"
+                 ng-click="$admin.selectVideo(link)"
+                 ng-repeat="link in $admin.selectUser.youtubeLinks track by $index">
+                <span ng-bind="link.title"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-repeat="alert in $admin.alerts">
+    <alert-directive message="alert"></alert-directive>
+</div>

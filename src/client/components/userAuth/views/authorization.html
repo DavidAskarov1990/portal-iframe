@@ -1,0 +1,61 @@
+<div id="authorization">
+    <div class="authorization-wrapper">
+        <div ng-show="$ctrl.isAuth">
+            <header>
+                <h1>Authorization</h1>
+            </header>
+            <section>
+                <div>
+                    <h2>Name</h2>
+                    <input ng-model="$ctrl.user.name" type="text">
+                </div>
+                <div>
+                    <h2>Password</h2>
+                    <input ng-model="$ctrl.user.password" type="password">
+                </div>
+                <div>
+                    <h3 ng-click="$ctrl.handlerRegistration()">Registration</h3>
+                </div>
+            </section>
+            <footer>
+                <button ng-click="$ctrl.cancel()">
+                    <h3>CANCEL</h3>
+                </button>
+                <button ng-click="$ctrl.login()">
+                    <h3>LOGIN</h3>
+                </button>
+            </footer>
+        </div>
+
+        <div ng-hide="$ctrl.isAuth">
+            <header>
+                <h1>Registration</h1>
+            </header>
+            <section>
+                <div>
+                    <h2>Name</h2>
+                    <input ng-model="$ctrl.user.name" type="text">
+                </div>
+                <div>
+                    <h2>Password</h2>
+                    <input ng-model="$ctrl.user.password" type="password">
+                </div>
+                <div>
+                    <h2>Confirm Password</h2>
+                    <input ng-model="$ctrl.user.confirmPassword" type="password">
+                </div>
+            </section>
+            <footer>
+                <button ng-click="$ctrl.cancel()">
+                    <h3>CANCEL</h3>
+                </button>
+                <button ng-click="$ctrl.registration()">
+                    <h3>Registration</h3>
+                </button>
+            </footer>
+        </div>
+    </div>
+</div>
+<div ng-repeat="alert in $ctrl.alerts">
+    <alert-directive message="alert"></alert-directive>
+</div>

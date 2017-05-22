@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taskApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Task</title>
+        <script src="public/bundle.js"></script>
+    </head>
+    <body ng-controller="mainCtrl as main">
+        <div id="menu-navigation">
+            <ul>
+                <li ng-show="main.is_admin" ui-sref="admin">
+                    <a>Admin</a>
+                </li>
+                <li ui-sref="home">
+                    <a>Home</a>
+                </li>
+                <li ui-sref="profile">
+                    <a>Profile</a>
+                </li>
+                <li ng-click="main.handler()">
+                    <a href="#" ng-bind="main.action"></a>
+                </li>
+            </ul>
+        </div>
+        <div ui-view></div>
+    </body>
+</html>
