@@ -20,6 +20,16 @@ class adminController{
 
     $onInit(){
         this.getAllUsers();
+        this.getUser();
+    }
+
+    getUser(){
+        this.userService.getUser()
+            .then(res => {
+                this.profile = res;
+            }, err => {
+                this.userService.logout();
+            })
     }
 
     getAllUsers(){
@@ -33,9 +43,10 @@ class adminController{
             })
     }
 
-    handlerBan(){
-        this.adminService.handlerBan()
+    handlerBan(id){
+        this.adminService.handlerBan(id, !this.selectUser.ban)
             .then(res => {
+                this.selectUser.ban = !this.selectUser.ban;
                 this.callAlert('Ban', 'successfully');
             }, err => {
                 this.callAlert('Error ', 'error');

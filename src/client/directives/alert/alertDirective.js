@@ -19,7 +19,7 @@ class alertDirective{
     link(scope, element, attrs){
         this.$timeout(() => {
             scope.isHide = true;
-        }, 3000);
+        }, 2000);
     }
 }
 

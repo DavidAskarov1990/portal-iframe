@@ -5,10 +5,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
-var four0four = require('./404')();
 
 var app = express();
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 
 app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,10 +28,6 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static('./src/client/'));
-// app.use('/app/* ', function(req, res, next) {
-//     four0four.send404(req, res);
-// });
-
 app.use('/*', express.static('./src/client/index.html'));
 
 app.listen(port, function() {

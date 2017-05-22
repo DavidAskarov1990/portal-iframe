@@ -22,9 +22,9 @@ class adminService{
         return deferred.promise;
     }
 
-    handlerBan(){
+    handlerBan(id_user, ban){
         let deferred = this.$q.defer();
-        this.$http.get(this.CONFIG.PATH + 'ban')
+        this.$http.post(this.CONFIG.PATH + 'ban', {id_user:id_user, ban: ban})
             .then(res => {
                 deferred.resolve(res.data);
             }, err => {

@@ -27,6 +27,14 @@ class profileCtrl{
                 this.userService.logout();
             })
     }
+
+    setSelectVideo(video){
+        if(this.profile.ban){
+            return;
+        }
+        this.currentVideo = video;
+    }
+
 }
 
 export default  profileCtrl;

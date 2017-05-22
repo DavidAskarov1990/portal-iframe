@@ -3,7 +3,7 @@
  */
 
 const CONFIG = {
-    PATH: 'http://localhost:3000/',
+    PATH: 'http://localhost:8000/',
     URL_YOUTUBE:'https://www.youtube.com/embed/',
     DEFAULT_LINK: 'https://www.youtube.com/embed/sKfk9iAZcF0'
 };

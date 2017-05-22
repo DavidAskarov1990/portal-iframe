@@ -47,6 +47,13 @@
     .select{
       .mixin-select;
     }
+
+    .ban-user{
+      display: flex;
+      justify-content: flex-end;
+      color: @color-title;
+      margin-left: 15px;
+    }
   }
 
   .right-side{
@@ -56,6 +63,23 @@
       padding: 25px 0 25px 0;
       justify-content: center;
       color: @color-title;
+    }
+
+    .do-ban{
+      color: @color-body;
+      background-color: #fff;
+      border: 1px solid @color-body;
+      border-radius: 4px;
+      margin-left: 25px;
+      padding: 5px;
+      cursor:pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    .do-ban:hover{
+      background-color: @color-body;
+      color:#fff;
+      transition: all 0.3s ease-out;
     }
 
     .content-video{

@@ -19,13 +19,14 @@ class homeController{
     }
 
     $onInit(){
-        this.homeService.getVideos()
+        this.getVideos();
+        this.getUser();
+    }
+
+    getUser(){
+        this.userService.getUser()
             .then(res => {
-                _.forEach(res, video => {
-                    let param = video;
-                    param.link = this.$sce.trustAsResourceUrl(this.CONFIG.URL_YOUTUBE + video.id);
-                    this.allVideos.push(param)
-                });
+                this.profile = res;
             }, err => {
                 this.userService.logout();
             })
@@ -39,10 +40,15 @@ class homeController{
                     param.link = this.$sce.trustAsResourceUrl(this.CONFIG.URL_YOUTUBE + video.id);
                     this.allVideos.push(param)
                 });
-            }, err => {})
+            }, err => {
+                this.userService.logout();
+        })
     }
 
     setSelectVideo(video){
+        if(this.profile.ban){
+            return;
+        }
         this.currentVideo = video;
     }
 

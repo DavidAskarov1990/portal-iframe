@@ -5,12 +5,18 @@
             class="user" ng-click="$admin.selectUserHandler(user)"
             ng-repeat="user in $admin.users track by $index">
             <span ng-bind="user.username"></span>
-            <input type="checkbox" ng-model="user.ban" ng-click="$admin.handlerBan()">
+            <span class="ban-user" ng-if="user.ban"> (ban)</span>
         </div>
     </div>
     <div class="right-side">
         <div>
-            <h1 ng-bind="$admin.selectUser.username"></h1>
+            <h1>
+                <span ng-bind="$admin.selectUser.username"></span>
+                <button ng-click="$admin.handlerBan($admin.selectUser._id)" class="do-ban">
+                    <span ng-if="!$admin.selectUser.ban">Do ban</span>
+                    <span ng-if="$admin.selectUser.ban">Remove ban</span>
+                </button>
+            </h1>
         </div>
         <div class="content-video">
             <iframe width="550" height="350" src="{{$admin.currentVideo}}"></iframe>

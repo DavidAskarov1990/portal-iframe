@@ -4,12 +4,15 @@
             User : {{$ctrl.profile.username}}
         </h1>
     </div>
-    <div class="content-video">
+    <div ng-hide="$ctrl.profile.ban" class="content-video">
         <iframe width="550" height="350" src="{{$ctrl.currentVideo}}"></iframe>
+    </div>
+    <div ng-show="$ctrl.profile.ban" class="content-video">
+        <h1>Access is denied</h1>
     </div>
     <div class="list-video">
         <div ng-repeat="video in $ctrl.profile.youtubeLinks track by $index">
-            <div class="video-link" ng-click="$ctrl.currentVideo = video.link">
+            <div class="video-link" ng-click="$ctrl.setSelectVideo(video.link)">
                 <span ng-bind="video.title" ng-class="{'select':video.link == $ctrl.currentVideo}"></span>
             </div>
         </div>

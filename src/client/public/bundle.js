@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -186,7 +186,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(22);
+	fixUrls = __webpack_require__(23);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -17534,7 +17534,7 @@ function updateLink(linkElement, options, obj) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29), __webpack_require__(30)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31), __webpack_require__(32)(module)))
 
 /***/ }),
 /* 3 */
@@ -22246,8 +22246,8 @@ module.exports = angular;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(37);
 /**
  * Created by david on 21.05.17.
  */
@@ -22277,8 +22277,8 @@ module.exports = angular;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(41);
 /**
  * Created by david on 20.05.17.
  */
@@ -22308,7 +22308,7 @@ module.exports = angular;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_less__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_less__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__main_less__);
 /**
  * Created by david on 20.05.17.
@@ -22361,7 +22361,7 @@ class mainCtrl{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(42);
 /**
  * Created by david on 21.05.17.
  */
@@ -22388,7 +22388,7 @@ class mainCtrl{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_less__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_less__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_less__);
 /**
  * Created by david on 20.05.17.
@@ -22412,8 +22412,8 @@ class mainCtrl{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(46);
 /**
  * Created by david on 20.05.17.
  */
@@ -22449,7 +22449,7 @@ class mainCtrl{
  */
 
 const CONFIG = {
-    PATH: 'http://localhost:3000/',
+    PATH: 'http://localhost:8000/',
     URL_YOUTUBE:'https://www.youtube.com/embed/',
     DEFAULT_LINK: 'https://www.youtube.com/embed/sKfk9iAZcF0'
 };
@@ -22466,7 +22466,7 @@ module.exports = (app) => {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alert_alertDirective__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alert_alertDirective__ = __webpack_require__(48);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "alertDirective", function() { return __WEBPACK_IMPORTED_MODULE_0__alert_alertDirective__["a"]; });
 /**
  * Created by david on 22.05.17.
@@ -56199,7 +56199,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side {\n  width: 20vw;\n  min-width: 200px;\n  background-color: #F2F1F0;\n  float: left;\n}\n#admin-page .left-side h1 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-transform: uppercase;\n  color: DarkOrange;\n}\n#admin-page .left-side .user {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 20px 5px;\n  color: darkgray;\n  background-color: #F2F1F0;\n  cursor: pointer;\n  border-top: 2px solid #F2F1F0;\n  border-bottom: 2px solid #F2F1F0;\n}\n#admin-page .left-side .user:nth-child(2n) {\n  background-color: rgba(255, 255, 255, 0.35);\n}\n#admin-page .left-side .user:hover {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .right-side h1 {\n  display: flex;\n  margin: 0;\n  padding: 25px 0 25px 0;\n  justify-content: center;\n  color: darkgray;\n}\n#admin-page .right-side .content-video {\n  display: flex;\n  justify-content: center;\n}\n#admin-page .right-side .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n}\n#admin-page .right-side .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#admin-page .right-side .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#admin-page .select-video {\n  color: DarkOrange;\n}\n", ""]);
+exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side {\n  width: 20vw;\n  min-width: 200px;\n  background-color: #F2F1F0;\n  float: left;\n}\n#admin-page .left-side h1 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-transform: uppercase;\n  color: DarkOrange;\n}\n#admin-page .left-side .user {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 20px 5px;\n  color: darkgray;\n  background-color: #F2F1F0;\n  cursor: pointer;\n  border-top: 2px solid #F2F1F0;\n  border-bottom: 2px solid #F2F1F0;\n}\n#admin-page .left-side .user:nth-child(2n) {\n  background-color: rgba(255, 255, 255, 0.35);\n}\n#admin-page .left-side .user:hover {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .ban-user {\n  display: flex;\n  justify-content: flex-end;\n  color: darkgray;\n  margin-left: 15px;\n}\n#admin-page .right-side h1 {\n  display: flex;\n  margin: 0;\n  padding: 25px 0 25px 0;\n  justify-content: center;\n  color: darkgray;\n}\n#admin-page .right-side .do-ban {\n  color: DarkOrange;\n  background-color: #fff;\n  border: 1px solid DarkOrange;\n  border-radius: 4px;\n  margin-left: 25px;\n  padding: 5px;\n  cursor: pointer;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .do-ban:hover {\n  background-color: DarkOrange;\n  color: #fff;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .content-video {\n  display: flex;\n  justify-content: center;\n}\n#admin-page .right-side .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n}\n#admin-page .right-side .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#admin-page .right-side .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#admin-page .select-video {\n  color: DarkOrange;\n}\n", ""]);
 
 // exports
 
@@ -56276,6 +56276,20 @@ exports.push([module.i, ".position-centre {\n  display: flex;\n  justify-content
 
 /***/ }),
 /* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "#alert {\n  position: absolute;\n  top: 25px;\n  right: 25px;\n  width: 20vw;\n  min-width: 300px;\n  height: 70px;\n  color: #fff;\n  opacity: 0.95;\n  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);\n  border-radius: 10px;\n  transition: all 0.6s ease-out;\n}\n#alert h1,\n#alert h2,\n#alert h3,\n#alert h4 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.successfully {\n  background-color: lightgreen;\n}\n.attention {\n  background-color: lightseagreen;\n}\n.error {\n  background-color: indianred;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 23 */
 /***/ (function(module, exports) {
 
 
@@ -56370,7 +56384,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -56396,7 +56410,7 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -56422,7 +56436,7 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -56448,7 +56462,7 @@ if(false) {
 }
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -56474,7 +56488,7 @@ if(false) {
 }
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -56500,7 +56514,7 @@ if(false) {
 }
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -56526,7 +56540,33 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(22);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/less-loader/dist/index.js!./alertStyle.less", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/less-loader/dist/index.js!./alertStyle.less");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 31 */
 /***/ (function(module, exports) {
 
 var g;
@@ -56553,7 +56593,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -56581,7 +56621,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56665,11 +56705,11 @@ let app = __WEBPACK_IMPORTED_MODULE_0_angular___default.a.module('taskApp', [
 
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_admin_less__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_admin_less__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_admin_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_admin_less__);
 /**
  * Created by david on 21.05.17.
@@ -56693,6 +56733,16 @@ class adminController{
 
     $onInit(){
         this.getAllUsers();
+        this.getUser();
+    }
+
+    getUser(){
+        this.userService.getUser()
+            .then(res => {
+                this.profile = res;
+            }, err => {
+                this.userService.logout();
+            })
     }
 
     getAllUsers(){
@@ -56706,9 +56756,10 @@ class adminController{
             })
     }
 
-    handlerBan(){
-        this.adminService.handlerBan()
+    handlerBan(id){
+        this.adminService.handlerBan(id, !this.selectUser.ban)
             .then(res => {
+                this.selectUser.ban = !this.selectUser.ban;
                 this.callAlert('Ban', 'successfully');
             }, err => {
                 this.callAlert('Error ', 'error');
@@ -56736,12 +56787,12 @@ class adminController{
 /* harmony default export */ __webpack_exports__["a"] = (adminController);
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__adminController__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__adminController__ = __webpack_require__(34);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "adminController", function() { return __WEBPACK_IMPORTED_MODULE_0__adminController__["a"]; });
 /**
  * Created by david on 21.05.17.
@@ -56751,7 +56802,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56779,9 +56830,9 @@ class adminService{
         return deferred.promise;
     }
 
-    handlerBan(){
+    handlerBan(id_user, ban){
         let deferred = this.$q.defer();
-        this.$http.get(this.CONFIG.PATH + 'ban')
+        this.$http.post(this.CONFIG.PATH + 'ban', {id_user:id_user, ban: ban})
             .then(res => {
                 deferred.resolve(res.data);
             }, err => {
@@ -56794,12 +56845,12 @@ class adminService{
 /* harmony default export */ __webpack_exports__["a"] = (adminService);
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__adminService__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__adminService__ = __webpack_require__(36);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "adminService", function() { return __WEBPACK_IMPORTED_MODULE_0__adminService__["a"]; });
 /**
  * Created by david on 21.05.17.
@@ -56809,13 +56860,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_home_less__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_home_less__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_home_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_home_less__);
 /**
  * Created by david on 20.05.17.
@@ -56838,13 +56889,14 @@ class homeController{
     }
 
     $onInit(){
-        this.homeService.getVideos()
+        this.getVideos();
+        this.getUser();
+    }
+
+    getUser(){
+        this.userService.getUser()
             .then(res => {
-                __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.forEach(res, video => {
-                    let param = video;
-                    param.link = this.$sce.trustAsResourceUrl(this.CONFIG.URL_YOUTUBE + video.id);
-                    this.allVideos.push(param)
-                });
+                this.profile = res;
             }, err => {
                 this.userService.logout();
             })
@@ -56858,10 +56910,15 @@ class homeController{
                     param.link = this.$sce.trustAsResourceUrl(this.CONFIG.URL_YOUTUBE + video.id);
                     this.allVideos.push(param)
                 });
-            }, err => {})
+            }, err => {
+                this.userService.logout();
+        })
     }
 
     setSelectVideo(video){
+        if(this.profile.ban){
+            return;
+        }
         this.currentVideo = video;
     }
 
@@ -56886,12 +56943,12 @@ class homeController{
 /* harmony default export */ __webpack_exports__["a"] = (homeController);
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__homeController__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__homeController__ = __webpack_require__(38);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "homeController", function() { return __WEBPACK_IMPORTED_MODULE_0__homeController__["a"]; });
 /**
  * Created by david on 20.05.17.
@@ -56902,7 +56959,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56946,12 +57003,12 @@ class homeService{
 /* harmony default export */ __webpack_exports__["a"] = (homeService);
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__homeService__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__homeService__ = __webpack_require__(40);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "homeService", function() { return __WEBPACK_IMPORTED_MODULE_0__homeService__["a"]; });
 /**
  * Created by david on 21.05.17.
@@ -56961,12 +57018,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__profileController__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__profileController__ = __webpack_require__(43);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "profileCtrl", function() { return __WEBPACK_IMPORTED_MODULE_0__profileController__["a"]; });
 /**
  * Created by david on 21.05.17.
@@ -56975,13 +57032,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_profile_less__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_profile_less__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_profile_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_profile_less__);
 /**
  * Created by david on 21.05.17.
@@ -57012,17 +57069,25 @@ class profileCtrl{
                 this.userService.logout();
             })
     }
+
+    setSelectVideo(video){
+        if(this.profile.ban){
+            return;
+        }
+        this.currentVideo = video;
+    }
+
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (profileCtrl);
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__userController__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__userController__ = __webpack_require__(45);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "userController", function() { return __WEBPACK_IMPORTED_MODULE_0__userController__["a"]; });
 /**
  * Created by david on 20.05.17.
@@ -57033,11 +57098,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_authorization_less__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_authorization_less__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_authorization_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_authorization_less__);
 /**
  * Created by david on 20.05.17.
@@ -57105,12 +57170,12 @@ class userController{
 /* harmony default export */ __webpack_exports__["a"] = (userController);
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(47);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "userService", function() { return __WEBPACK_IMPORTED_MODULE_0__user__["a"]; });
 /**
  * Created by david on 20.05.17.
@@ -57121,7 +57186,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57197,11 +57262,11 @@ class userService {
 /* harmony default export */ __webpack_exports__["a"] = (userService);
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alertStyle_less__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alertStyle_less__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alertStyle_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__alertStyle_less__);
 /**
  * Created by david on 22.05.17.
@@ -57224,51 +57289,11 @@ class alertDirective{
     link(scope, element, attrs){
         this.$timeout(() => {
             scope.isHide = true;
-        }, 3000);
+        }, 2000);
     }
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (alertDirective);
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "#alert {\n  position: absolute;\n  top: 25px;\n  right: 25px;\n  width: 20vw;\n  min-width: 300px;\n  height: 70px;\n  color: #fff;\n  opacity: 0.95;\n  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);\n  border-radius: 10px;\n  transition: all 0.6s ease-out;\n}\n#alert h1,\n#alert h2,\n#alert h3,\n#alert h4 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.successfully {\n  background-color: lightgreen;\n}\n.attention {\n  background-color: lightseagreen;\n}\n.error {\n  background-color: indianred;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(47);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/less-loader/dist/index.js!./alertStyle.less", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/less-loader/dist/index.js!./alertStyle.less");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 /******/ ]);
