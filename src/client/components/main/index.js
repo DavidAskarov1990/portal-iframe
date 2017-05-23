@@ -11,6 +11,7 @@ class mainCtrl{
         this.$cookies = $cookies;
         this.user = {};
         this.is_admin = false;
+        this.workMongoDB = false;
         $scope.$on('actionAuth', (event, data) => {
             this.action = this.$cookies.get('token') ? 'Logout' : 'Log in';
             this.isAdmin();
@@ -39,6 +40,8 @@ class mainCtrl{
             })
     }
 }
+
+mainCtrl.$$ngIsClass = true;
 
 export default (app) => {
     app.controller('mainCtrl', mainCtrl)

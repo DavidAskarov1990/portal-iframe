@@ -36,5 +36,6 @@ class profileCtrl{
     }
 
 }
+profileCtrl.$$ngIsClass = true;
 
 export default  profileCtrl;

@@ -22,5 +22,6 @@ class alertDirective{
         }, 2000);
     }
 }
+alertDirective.$$ngIsClass = true;
 
 export default alertDirective;

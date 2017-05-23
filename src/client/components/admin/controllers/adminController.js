@@ -70,5 +70,6 @@ class adminController{
         this.alerts.push(alert);
     }
 }
+adminController.$$ngIsClass = true;
 
 export default adminController;

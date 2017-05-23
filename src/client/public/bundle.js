@@ -22323,6 +22323,7 @@ class mainCtrl{
         this.$cookies = $cookies;
         this.user = {};
         this.is_admin = false;
+        this.workMongoDB = false;
         $scope.$on('actionAuth', (event, data) => {
             this.action = this.$cookies.get('token') ? 'Logout' : 'Log in';
             this.isAdmin();
@@ -22351,6 +22352,8 @@ class mainCtrl{
             })
     }
 }
+
+mainCtrl.$$ngIsClass = true;
 
 /* harmony default export */ __webpack_exports__["a"] = ((app) => {
     app.controller('mainCtrl', mainCtrl)
@@ -56199,7 +56202,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side {\n  width: 20vw;\n  min-width: 200px;\n  background-color: #F2F1F0;\n  float: left;\n}\n#admin-page .left-side h1 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-transform: uppercase;\n  color: DarkOrange;\n}\n#admin-page .left-side .user {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 20px 5px;\n  color: darkgray;\n  background-color: #F2F1F0;\n  cursor: pointer;\n  border-top: 2px solid #F2F1F0;\n  border-bottom: 2px solid #F2F1F0;\n}\n#admin-page .left-side .user:nth-child(2n) {\n  background-color: rgba(255, 255, 255, 0.35);\n}\n#admin-page .left-side .user:hover {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .ban-user {\n  display: flex;\n  justify-content: flex-end;\n  color: darkgray;\n  margin-left: 15px;\n}\n#admin-page .right-side h1 {\n  display: flex;\n  margin: 0;\n  padding: 25px 0 25px 0;\n  justify-content: center;\n  color: darkgray;\n}\n#admin-page .right-side .do-ban {\n  color: DarkOrange;\n  background-color: #fff;\n  border: 1px solid DarkOrange;\n  border-radius: 4px;\n  margin-left: 25px;\n  padding: 5px;\n  cursor: pointer;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .do-ban:hover {\n  background-color: DarkOrange;\n  color: #fff;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .content-video {\n  display: flex;\n  justify-content: center;\n}\n#admin-page .right-side .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n}\n#admin-page .right-side .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#admin-page .right-side .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#admin-page .select-video {\n  color: DarkOrange;\n}\n", ""]);
+exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n.mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side {\n  width: 20vw;\n  min-width: 200px;\n  background-color: #F2F1F0;\n  float: left;\n}\n#admin-page .left-side h1 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-transform: uppercase;\n  color: DarkOrange;\n}\n#admin-page .left-side .user {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 20px 5px;\n  color: lightgray;\n  background-color: #F2F1F0;\n  cursor: pointer;\n  border-top: 2px solid #F2F1F0;\n  border-bottom: 2px solid #F2F1F0;\n}\n#admin-page .left-side .user:nth-child(2n) {\n  background-color: rgba(255, 255, 255, 0.35);\n}\n#admin-page .left-side .user:hover {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#admin-page .left-side .ban-user {\n  display: flex;\n  justify-content: flex-end;\n  color: lightgray;\n  margin-left: 15px;\n}\n#admin-page .right-side h1 {\n  display: flex;\n  margin: 0;\n  padding: 25px 0 25px 0;\n  justify-content: center;\n  color: lightgray;\n}\n#admin-page .right-side .do-ban {\n  color: DarkOrange;\n  background-color: #fff;\n  border: 1px solid DarkOrange;\n  border-radius: 4px;\n  margin-left: 25px;\n  padding: 5px;\n  cursor: pointer;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .do-ban:hover {\n  background-color: DarkOrange;\n  color: #fff;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .content-video {\n  display: flex;\n  justify-content: center;\n}\n#admin-page .right-side .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n}\n#admin-page .right-side .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#admin-page .right-side .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: lightgray;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#admin-page .right-side .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#admin-page .select-video {\n  color: DarkOrange;\n}\n", ""]);
 
 // exports
 
@@ -56213,7 +56216,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "#home {\n  padding-top: 25px;\n}\n#home .content-video {\n  display: flex;\n  justify-content: center;\n}\n#home .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n}\n#home .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#home .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#home .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#home .select {\n  color: DarkOrange;\n}\n", ""]);
+exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#home {\n  padding-top: 25px;\n}\n#home .content-video {\n  display: flex;\n  justify-content: center;\n}\n#home .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n}\n#home .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#home .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#home .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#home .select {\n  color: DarkOrange;\n}\n", ""]);
 
 // exports
 
@@ -56227,7 +56230,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#menu-navigation {\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  background-color: DarkOrange;\n  width: 100%;\n  height: 58px;\n}\n#menu-navigation ul {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  outline: none;\n}\n#menu-navigation ul li {\n  list-style-type: none;\n  width: 100px;\n  height: 58px;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#menu-navigation ul li a {\n  text-decoration: none;\n  text-transform: uppercase;\n  color: #FFF0F0;\n}\n#menu-navigation ul li:hover {\n  background-color: #FFF0F0;\n}\n#menu-navigation ul li:hover a {\n  color: DarkOrange;\n}\n", ""]);
+exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#menu-navigation {\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  background-color: DarkOrange;\n  width: 100%;\n  height: 58px;\n}\n#menu-navigation .toogle-db {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  width: 100%;\n  text-transform: uppercase;\n  color: lightgray;\n}\n#menu-navigation .toogle-db li:hover {\n  color: DarkOrange;\n}\n#menu-navigation ul {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  outline: none;\n}\n#menu-navigation ul li {\n  list-style-type: none;\n  width: 100px;\n  height: 58px;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#menu-navigation ul li a {\n  text-decoration: none;\n  text-transform: uppercase;\n  color: lightgray;\n}\n#menu-navigation ul li:hover {\n  background-color: lightgray;\n}\n#menu-navigation ul li:hover a {\n  color: DarkOrange;\n}\n", ""]);
 
 // exports
 
@@ -56241,7 +56244,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "#profile .username h1 {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n  color: DarkOrange;\n  -webkit-text-stroke-width: 1px;\n  -webkit-text-stroke-color: lightgray;\n}\n#profile .content-video {\n  display: flex;\n  justify-content: center;\n}\n#profile .content-video iframe {\n  padding: 5px;\n  border: 3px solid lightgray;\n}\n#profile .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n  max-height: 35vh;\n  overflow: auto;\n}\n#profile .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#profile .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#profile .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#profile .select {\n  color: DarkOrange;\n}\n", ""]);
+exports.push([module.i, ".mixin-pos-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.mixin-select {\n  border-bottom: 2px solid DarkOrange;\n  color: DarkOrange;\n}\n#profile .username h1 {\n  display: flex;\n  justify-content: center;\n  text-transform: uppercase;\n  color: DarkOrange;\n  -webkit-text-stroke-width: 1px;\n  -webkit-text-stroke-color: lightgray;\n}\n#profile .content-video {\n  display: flex;\n  justify-content: center;\n}\n#profile .content-video iframe {\n  padding: 5px;\n  border: 3px solid lightgray;\n}\n#profile .list-video {\n  display: block;\n  width: 100%;\n  background-color: DarkOrange;\n  max-height: 35vh;\n  overflow: auto;\n}\n#profile .list-video .video-link {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  padding: 15px;\n  color: darkgray;\n  background-color: white;\n  cursor: pointer;\n  text-transform: uppercase;\n  transition: all 0.3s ease-out;\n}\n#profile .list-video .video-link button {\n  position: absolute;\n  right: 15px;\n  border: none;\n  background-color: DarkOrange;\n  color: #FFF0F0;\n  text-transform: uppercase;\n  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  cursor: pointer;\n  z-index: 100;\n  padding: 5px;\n}\n#profile .list-video .video-link:hover {\n  margin: 5px 0;\n  padding: 18px;\n  color: DarkOrange;\n  transition: all 0.3s ease-out;\n}\n#profile .select {\n  color: DarkOrange;\n}\n", ""]);
 
 // exports
 
@@ -56783,6 +56786,7 @@ class adminController{
         this.alerts.push(alert);
     }
 }
+adminController.$$ngIsClass = true;
 
 /* harmony default export */ __webpack_exports__["a"] = (adminController);
 
@@ -56939,6 +56943,7 @@ class homeController{
         this.alerts.push(alert);
     }
 }
+homeController.$$ngIsClass = true;
 
 /* harmony default export */ __webpack_exports__["a"] = (homeController);
 
@@ -57078,6 +57083,7 @@ class profileCtrl{
     }
 
 }
+profileCtrl.$$ngIsClass = true;
 
 /* harmony default export */ __webpack_exports__["a"] = (profileCtrl);
 
@@ -57167,6 +57173,7 @@ class userController{
         this.alerts.push(alert);
     }
 }
+userController.$$ngIsClass = true;
 
 /* harmony default export */ __webpack_exports__["a"] = (userController);
 
@@ -57293,6 +57300,7 @@ class alertDirective{
         }, 2000);
     }
 }
+alertDirective.$$ngIsClass = true;
 
 /* harmony default export */ __webpack_exports__["a"] = (alertDirective);
 

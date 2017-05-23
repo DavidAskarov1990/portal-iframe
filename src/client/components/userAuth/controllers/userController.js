@@ -61,5 +61,6 @@ class userController{
         this.alerts.push(alert);
     }
 }
+userController.$$ngIsClass = true;
 
 export default userController;

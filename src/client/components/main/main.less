@@ -1,12 +1,4 @@
-@color-body:  DarkOrange;
-@color-title: #FFF0F0;
-@height-list-menu: 58px;
-
-.mixin-pos-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "../style/app";
 
 #menu-navigation{
   display:flex;
@@ -15,6 +7,25 @@
   background-color: @color-body;
   width: 100%;
   height: @height-list-menu;
+
+  .toogle-db{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    text-transform: uppercase;
+    color: @color-title;
+
+    li{
+
+    }
+  }
+
+  .toogle-db{
+    li:hover{
+      color: @color-body;
+    }
+  }
 
   ul{
     .mixin-pos-center;
@@ -41,4 +52,6 @@
       }
     }
   }
+
+
 }

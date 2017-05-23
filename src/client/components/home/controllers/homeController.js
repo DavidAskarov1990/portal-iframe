@@ -69,5 +69,6 @@ class homeController{
         this.alerts.push(alert);
     }
 }
+homeController.$$ngIsClass = true;
 
 export default homeController;
